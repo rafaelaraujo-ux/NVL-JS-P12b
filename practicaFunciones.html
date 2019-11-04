@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica de bucles (II)</title>
+    
+    <script type="application/javascript">
+        
+        var numeroAleatorio = Math.floor(Math.random()*100)+1;
+        
+        var numImpar = new Array();
+        
+        var numPar = new Array();
+        
+        
+        // Designo dos funciones:
+        // Una para los números impares que guardan en el array numImpar.
+        // La otra para los numeros pares que se guardan en el array numPar.
+        
+        function impar(){
+			
+			numImpar.push(numeroAleatorio);
+            
+		}
+        
+        function par(){
+			
+			numPar.push(numeroAleatorio);
+            
+		}
+        
+        
+        
+		for(var i=0;i<50;i++){
+            
+            if(numeroAleatorio % 2){
+                
+                // Aquí se llama a la función impar.
+                
+                impar(numeroAleatorio);
+                
+                numeroAleatorio = Math.floor(Math.random()*100)+1;
+            
+            }
+            
+            else{
+                
+                // Aquí se hace la llamada a la función par.
+                
+                par(numeroAleatorio);
+                
+                numeroAleatorio = Math.floor(Math.random()*100)+1;
+                
+            }
+            
+		}
+        
+        console.log(numImpar);
+        console.log(numPar);
+        
+
+    </script>
+
+</head>
+
+<body>
+    
+    
+</body>
+</html>
